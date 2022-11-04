@@ -3,14 +3,6 @@ import NewsItem from './NewsItem'
 import Spinner from './Spinner';
 import PropTypes from 'prop-types'
 
-// business
-// entertainment
-// general 
-// health 
-// science
-// sports
-// technology
-
 export class News extends Component {
     static defaultProps = {
         county: 'in',
