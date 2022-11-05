@@ -10,14 +10,33 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import LoadingBar from 'react-top-loading-bar'
+
 
 export default class App extends Component {
   pageSize = 5;
+
+  state = {
+    progress: 0
+  }
+
+
+  setProgress(progress) {
+    this.setState({
+      progress: progress
+    })
+  }
+
   render() {
     return (
       <div>
         <Router>
           <Navbar />
+          <LoadingBar
+            color='#f11946'
+            progress={this.state.progress}
+          />
+
           <Routes>
             <Route exact path="/" element={<News key="General" pageSize={this.pageSize} country="in" category="General" />}></Route>
             <Route exact path="/Business" element={<News key="Business" pageSize={this.pageSize} country="in" category="Business" />}></Route>
