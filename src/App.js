@@ -21,7 +21,7 @@ export default class App extends Component {
   }
 
 
-  setProgress(progress) {
+  setProgress = (progress) => {
     this.setState({
       progress: progress
     })
@@ -38,14 +38,14 @@ export default class App extends Component {
           />
 
           <Routes>
-            <Route exact path="/" element={<News key="General" pageSize={this.pageSize} country="in" category="General" />}></Route>
-            <Route exact path="/Business" element={<News key="Business" pageSize={this.pageSize} country="in" category="Business" />}></Route>
-            <Route exact path="/General" element={<News key="General" pageSize={this.pageSize} country="in" category="General" />}></Route>
-            <Route exact path="/Science" element={<News key="Science" pageSize={this.pageSize} country="in" category="Science" />}></Route>
-            <Route exact path="/Technology" element={<News key="technology" pageSize={this.pageSize} country="in" category="Technology" />}></Route>
-            <Route exact path="/Sports" element={<News key="Sports" pageSize={this.pageSize} country="in" category="Sports" />}></Route>
-            <Route exact path="/Entertainment" element={<News key="Entertainment" pageSize={this.pageSize} country="in" category="Entertainment" />}></Route>
-            <Route exact path="/Health" element={<News key="Health" pageSize={this.pageSize} country="in" category="Health" />}></Route>
+            <Route exact path="/" element={<News setProgess={this.setProgress} key="General" pageSize={this.pageSize} country="in" category="General" />}></Route>
+            <Route exact path="/Business" element={<News setProgess={this.setProgress} key="Business" pageSize={this.pageSize} country="in" category="Business" />}></Route>
+            <Route exact path="/General" element={<News setProgess={this.setProgress} key="General" pageSize={this.pageSize} country="in" category="General" />}></Route>
+            <Route exact path="/Science" element={<News setProgess={this.setProgress} key="Science" pageSize={this.pageSize} country="in" category="Science" />}></Route>
+            <Route exact path="/Technology" element={<News setProgess={this.setProgress} key="technology" pageSize={this.pageSize} country="in" category="Technology" />}></Route>
+            <Route exact path="/Sports" element={<News setProgess={this.setProgress} key="Sports" pageSize={this.pageSize} country="in" category="Sports" />}></Route>
+            <Route exact path="/Entertainment" element={<News setProgess={this.setProgress} key="Entertainment" pageSize={this.pageSize} country="in" category="Entertainment" />}></Route>
+            <Route exact path="/Health" element={<News setProgess={this.setProgress} key="Health" pageSize={this.pageSize} country="in" category="Health" />}></Route>
           </Routes>
         </Router>
       </div>
