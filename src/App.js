@@ -7,7 +7,7 @@ import News from './Components/News';
 import {
   BrowserRouter as Router,
   Routes,
-  Route, HashRouter
+  Route, HashRouter,
 } from "react-router-dom";
 import LoadingBar from 'react-top-loading-bar'
 
