@@ -35,7 +35,7 @@ const News = (props) => {
         document.title = `${props.category} - NewsUpdates`;
         update();
 
-    }, [])
+    })
 
     const fetchMoreData = async () => {
         const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=a71d872d70064898b1c0e4cfa942f937&page=${page + 1}&pagesize=${props.pageSize}`;
